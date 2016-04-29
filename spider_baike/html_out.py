@@ -1,15 +1,16 @@
-#html输出器
+# html输出器
 class HtmlOutputer(object):
     def __init__(self):
-        self.datas=[]
-    def collect_data(self,data):
+        self.datas = []
+
+    def collect_data(self, data):
         if data is None:
             return
         self.datas.append(data)
         # print('数据',self.datas)
 
     def output_html(self):
-        fout=open('jieguo.html','w',encoding="utf-8")
+        fout = open('jieguo.html', 'w', encoding="utf-8")
         fout.write("<html>")
         fout.write("<head><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\"></head>")
         fout.write("<body>")
@@ -23,6 +24,5 @@ class HtmlOutputer(object):
         fout.write("</table>")
         fout.write("</body>")
         fout.write("</html>")
-
 
         fout.close()
